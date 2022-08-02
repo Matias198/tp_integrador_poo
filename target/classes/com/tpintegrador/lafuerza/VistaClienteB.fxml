@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="612.0" prefWidth="884.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tpintegrador.lafuerza.AppClienteControllerB">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="613.0" prefWidth="884.0" VBox.vgrow="ALWAYS">
+         <children>
+            <HBox alignment="CENTER" prefHeight="81.0" prefWidth="884.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Button fx:id="inicio" mnemonicParsing="false" onAction="#inicio" prefHeight="50.0" prefWidth="90.0" text="INICIO" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Button fx:id="clientes" mnemonicParsing="false" onAction="#clientes" prefHeight="50.0" prefWidth="90.0" text="CLIENTES" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Button fx:id="tutores" mnemonicParsing="false" onAction="#tutores" prefHeight="50.0" prefWidth="90.0" text="TUTORES" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Button fx:id="musculos" mnemonicParsing="false" onAction="#musculos" prefHeight="50.0" prefWidth="90.0" text="MUSCULOS" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#ejercicios" prefHeight="50.0" prefWidth="90.0" text="EJERCICIOS" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Button fx:id="btnSalir1" mnemonicParsing="false" onAction="#clickSalir" prefHeight="50.0" prefWidth="90.0" text="SALIR" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Separator layoutX="9.0" layoutY="79.0" prefHeight="11.0" prefWidth="870.0" />
+            <VBox layoutX="14.0" layoutY="91.0" prefHeight="522.0" prefWidth="870.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="515.0" prefWidth="870.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="360.0" prefWidth="240.0">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="210.0" text="DATOS PERSONALES" textAlignment="CENTER" textFill="#000dff">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Separator layoutX="10.0" layoutY="51.0" prefHeight="10.0" prefWidth="202.0" visible="false" />
+                              <TextField fx:id="formDni" disable="true" prefHeight="25.0" prefWidth="237.0" promptText="DNI" />
+                              <Separator prefHeight="10.0" prefWidth="202.0" visible="false" />
+                              <TextField fx:id="formNombres" prefHeight="25.0" prefWidth="232.0" promptText="Nombres" />
+                              <Separator layoutX="10.0" layoutY="35.0" prefHeight="10.0" prefWidth="202.0" visible="false" />
+                              <TextField fx:id="formApellidos" layoutX="10.0" layoutY="45.0" prefHeight="25.0" prefWidth="232.0" promptText="Apellidos" />
+                              <Separator layoutX="10.0" layoutY="70.0" prefHeight="10.0" prefWidth="202.0" visible="false" />
+                              <DatePicker fx:id="formFechaNac" editable="false" prefHeight="25.0" prefWidth="254.0" promptText="Fecha de nacimiento" />
+                              <Separator layoutX="10.0" layoutY="105.0" prefHeight="10.0" prefWidth="202.0" visible="false" />
+                              <ComboBox fx:id="formSexo" prefHeight="25.0" prefWidth="257.0" promptText="Sexo" />
+                              <Separator layoutX="10.0" layoutY="140.0" prefHeight="10.0" prefWidth="202.0" visible="false" />
+                              <DatePicker fx:id="formFechaIng" editable="false" prefHeight="25.0" prefWidth="248.0" promptText="Fecha de ingreso" />
+                              <Separator layoutX="10.0" layoutY="175.0" prefHeight="10.0" prefWidth="202.0" visible="false" />
+                              <TextArea fx:id="formMedico" prefHeight="244.0" prefWidth="240.0" promptText="Consideraciones médicas" />
+                              <Separator prefHeight="0.0" prefWidth="240.0" visible="false" />
+                              <HBox alignment="CENTER" prefHeight="28.0" prefWidth="240.0">
+                                 <children>
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <Button fx:id="btnEditar" mnemonicParsing="false" onAction="#clickEditar" prefHeight="25.0" prefWidth="70.0" text="Editar" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <Separator orientation="VERTICAL" prefHeight="360.0" prefWidth="25.0" />
+                        <VBox prefHeight="503.0" prefWidth="600.0">
+                           <children>
+                              <HBox prefHeight="264.0" prefWidth="600.0">
+                                 <children>
+                                    <VBox prefHeight="264.0" prefWidth="300.0">
+                                       <children>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="664.0" text="RUTINAS ACTIVAS" textAlignment="CENTER" textFill="#000dff">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TableView fx:id="tablaRutinasActivas" prefHeight="360.0" prefWidth="300.0" />
+                                          <Separator prefHeight="9.0" prefWidth="600.0" visible="false" />
+                                          <HBox alignment="CENTER" prefHeight="36.0" prefWidth="437.0">
+                                             <children>
+                                                <Button fx:id="btnNueva" mnemonicParsing="false" onAction="#clickNueva" prefHeight="25.0" prefWidth="94.0" text="NUEVA" textFill="#26c72d" />
+                                                <Separator orientation="VERTICAL" prefHeight="25.0" prefWidth="14.0" visible="false" />
+                                                <Button fx:id="btnAdministrar" mnemonicParsing="false" onAction="#clickAdminRutina" prefHeight="25.0" prefWidth="94.0" text="VER DETALLES" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                                    <VBox prefHeight="264.0" prefWidth="300.0">
+                                       <children>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="664.0" text="HISTORIAL DE RUTINAS" textAlignment="CENTER" textFill="#000dff">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TableView fx:id="tablaHistorial" prefHeight="256.0" prefWidth="276.0" />
+                                          <Separator prefHeight="9.0" prefWidth="600.0" visible="false" />
+                                          <HBox alignment="CENTER" prefHeight="17.0" prefWidth="276.0">
+                                             <children>
+                                                <Button fx:id="btnVer" mnemonicParsing="false" onAction="#clickHistorial" prefHeight="25.0" prefWidth="94.0" text="VER TODAS" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <Separator prefHeight="4.0" prefWidth="600.0" visible="false" />
+                              <HBox prefHeight="4.0" prefWidth="600.0">
+                                 <children>
+                                    <Label fx:id="labelAlerta" textFill="RED">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Separator prefHeight="28.0" prefWidth="600.0" />
+                              <HBox alignment="CENTER_LEFT" prefHeight="74.0" prefWidth="600.0">
+                                 <children>
+                                    <VBox alignment="CENTER" prefHeight="58.0" prefWidth="600.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="0.0" prefWidth="593.0" text="Calculo de volumen total segun grupo muscular entrenado (rutinas activas)" />
+                                          <Separator prefHeight="17.0" prefWidth="600.0" visible="false" />
+                                          <HBox alignment="CENTER" prefHeight="38.0" prefWidth="600.0">
+                                             <children>
+                                                <ComboBox fx:id="calculoGM" prefHeight="25.0" prefWidth="151.0" promptText="Grupo Muscular" />
+                                                <Separator orientation="VERTICAL" prefHeight="31.0" prefWidth="17.0" visible="false" />
+                                                <Button mnemonicParsing="false" onAction="#calcularGm" prefHeight="25.0" prefWidth="94.0" text="CALCULAR" />
+                                                <Separator orientation="VERTICAL" prefHeight="31.0" prefWidth="17.0" visible="false" />
+                                                <Label prefHeight="17.0" prefWidth="135.0" text="VOLUMEN TOTAL:">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="labelV1" alignment="CENTER" contentDisplay="RIGHT" prefHeight="27.0" prefWidth="175.0" textFill="#ff9200">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children></HBox>
+                              <Separator prefHeight="21.0" prefWidth="600.0" />
+                              <HBox alignment="CENTER_LEFT" prefHeight="74.0" prefWidth="600.0">
+                                 <children>
+                                    <VBox alignment="CENTER" prefHeight="58.0" prefWidth="600.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="0.0" prefWidth="593.0" text="Calculo de volumen semanal (historico | segun &quot;Fecha&quot; -1 semana)" />
+                                          <Separator prefHeight="17.0" prefWidth="600.0" visible="false" />
+                                          <HBox alignment="CENTER" prefHeight="38.0" prefWidth="600.0">
+                                             <children>
+                                                <DatePicker fx:id="calculoFecha" prefHeight="25.0" prefWidth="151.0" promptText="Fecha" />
+                                                <Separator orientation="VERTICAL" prefHeight="31.0" prefWidth="17.0" visible="false" />
+                                                <Button mnemonicParsing="false" onAction="#calcularSm" prefHeight="25.0" prefWidth="94.0" text="CALCULAR" />
+                                                <Separator orientation="VERTICAL" prefHeight="31.0" prefWidth="17.0" visible="false" />
+                                                <Label prefHeight="17.0" prefWidth="135.0" text="VOLUMEN TOTAL:">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="labelV2" alignment="CENTER" contentDisplay="RIGHT" prefHeight="27.0" prefWidth="175.0" textFill="#ff9200">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>

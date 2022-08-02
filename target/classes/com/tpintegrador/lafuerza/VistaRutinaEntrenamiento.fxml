@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="612.0" prefWidth="884.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tpintegrador.lafuerza.AppREController">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="613.0" prefWidth="884.0" VBox.vgrow="ALWAYS">
+         <children>
+            <HBox alignment="CENTER" prefHeight="81.0" prefWidth="884.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Button fx:id="inicio" mnemonicParsing="false" onAction="#inicio" prefHeight="50.0" prefWidth="90.0" text="INICIO" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Button fx:id="clientes" mnemonicParsing="false" onAction="#clientes" prefHeight="50.0" prefWidth="90.0" text="CLIENTES" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Button fx:id="tutores" mnemonicParsing="false" onAction="#tutores" prefHeight="50.0" prefWidth="90.0" text="TUTORES" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Button fx:id="musculos" mnemonicParsing="false" onAction="#musculos" prefHeight="50.0" prefWidth="90.0" text="MUSCULOS" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#ejercicios" prefHeight="50.0" prefWidth="90.0" text="EJERCICIOS" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Button fx:id="btnSalir1" mnemonicParsing="false" onAction="#clickSalir" prefHeight="50.0" prefWidth="90.0" text="SALIR" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Separator layoutX="9.0" layoutY="79.0" prefHeight="11.0" prefWidth="870.0" />
+            <VBox layoutX="14.0" layoutY="91.0" prefHeight="522.0" prefWidth="870.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="515.0" prefWidth="870.0">
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="515.0" prefWidth="340.0">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="210.0" text="DATOS DE RUTINA" textAlignment="CENTER" textFill="#000dff">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Separator layoutX="10.0" layoutY="51.0" prefHeight="10.0" prefWidth="202.0" visible="false" />
+                              <HBox prefHeight="8.0" prefWidth="340.0">
+                                 <children>
+                                    <DatePicker fx:id="formFechaInicio" onAction="#cambiarDia" prefHeight="25.0" prefWidth="204.0" promptText="Fecha de inicio" />
+                                    <Separator orientation="VERTICAL" prefHeight="25.0" prefWidth="13.0" visible="false" />
+                                    <TextField fx:id="formDia" disable="true" prefHeight="25.0" prefWidth="123.0" promptText="Día" />
+                                 </children>
+                              </HBox>
+                              <Separator prefHeight="15.0" prefWidth="340.0" visible="false" />
+                              <HBox prefHeight="19.0" prefWidth="340.0">
+                                 <children>
+                                    <ComboBox fx:id="formTipoRutina" onAction="#cambiarTutores" prefHeight="25.0" prefWidth="204.0" promptText="Tipo de rutina" />
+                                 </children>
+                              </HBox>
+                              <Separator prefHeight="15.0" prefWidth="340.0" visible="false" />
+                              <HBox alignment="CENTER_LEFT" prefHeight="21.0" prefWidth="340.0">
+                                 <children>
+                                    <ComboBox fx:id="formEncargado" prefWidth="204.0" promptText="Tutor encargado" />
+                                 </children>
+                              </HBox>
+                              <Separator prefHeight="36.0" prefWidth="340.0" />
+                              <HBox prefHeight="15.0" prefWidth="340.0">
+                                 <children>
+                                    <TextField fx:id="searchBoxEjercicio" prefHeight="25.0" prefWidth="277.0" promptText="Buscar ejercicio" />
+                                    <Separator orientation="VERTICAL" prefHeight="52.0" prefWidth="12.0" visible="false" />
+                                    <Button mnemonicParsing="false" onAction="#clickBuscar" text="Buscar" />
+                                 </children>
+                              </HBox>
+                              <Separator prefHeight="24.0" prefWidth="340.0" visible="false" />
+                              <ComboBox fx:id="formEjercicio" prefHeight="25.0" prefWidth="466.0" promptText="Ejercicio" />
+                              <Separator layoutX="10.0" layoutY="140.0" prefHeight="10.0" prefWidth="202.0" visible="false" />
+                              <HBox alignment="CENTER" prefHeight="29.0" prefWidth="240.0">
+                                 <children>
+                                    <VBox alignment="CENTER" prefHeight="42.0" prefWidth="170.0">
+                                       <children>
+                                          <Label text="Repeticiones" />
+                                          <Spinner fx:id="formRepeticiones" editable="true" prefHeight="25.0" prefWidth="200.0" />
+                                       </children>
+                                    </VBox>
+                                    <Separator orientation="VERTICAL" prefHeight="200.0" visible="false" />
+                                    <VBox alignment="CENTER" prefHeight="42.0" prefWidth="170.0">
+                                       <children>
+                                          <Label text="Peso" />
+                                          <Spinner fx:id="formPeso" editable="true" prefHeight="25.0" prefWidth="210.0" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <Separator prefHeight="16.0" prefWidth="340.0" visible="false" />
+                              <HBox alignment="CENTER_LEFT" prefHeight="5.0" prefWidth="340.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#clickAgregar" text="Agregar" />
+                                 </children>
+                              </HBox>
+                              <Separator prefHeight="9.0" prefWidth="340.0" visible="false" />
+                              <ListView fx:id="tablaEjercicios" prefHeight="157.0" prefWidth="340.0" />
+                              <Separator prefHeight="13.0" prefWidth="361.0" visible="false" />
+                              <HBox alignment="CENTER" prefHeight="0.0" prefWidth="240.0">
+                                 <children>
+                                    <Button fx:id="btnBorrarLista" mnemonicParsing="false" onAction="#clickBorrarLista" text="Borrar" />
+                                    <Separator orientation="VERTICAL" prefHeight="25.0" prefWidth="234.0" visible="false" />
+                                    <Button fx:id="btnLimpiar" mnemonicParsing="false" onAction="#clickLimpiar" text="Limpiar" textFill="RED" />
+                                 </children>
+                              </HBox>
+                              <Separator prefHeight="31.0" prefWidth="340.0" />
+                              <HBox alignment="CENTER" prefHeight="9.0" prefWidth="340.0">
+                                 <children>
+                                    <VBox alignment="CENTER" prefHeight="42.0" prefWidth="170.0">
+                                       <children>
+                                          <Label text="Series" />
+                                          <Spinner fx:id="formSeries" editable="true" prefWidth="170.0" />
+                                       </children>
+                                    </VBox>
+                                    <Separator orientation="VERTICAL" prefHeight="100.0" prefWidth="2.0" visible="false" />
+                                    <VBox alignment="CENTER" prefHeight="42.0" prefWidth="170.0">
+                                       <children>
+                                          <Label text="Seg. Descanso" />
+                                          <Spinner fx:id="formSegDesc" editable="true" prefWidth="170.0" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <Separator layoutX="10.0" layoutY="175.0" prefHeight="36.0" prefWidth="340.0" />
+                              <HBox alignment="CENTER" prefHeight="28.0" prefWidth="240.0">
+                                 <children>
+                                    <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#clickAdd" prefHeight="25.0" prefWidth="70.0" text="&gt;&gt;&gt;" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <Separator orientation="VERTICAL" prefHeight="515.0" prefWidth="17.0" />
+                        <VBox alignment="CENTER" prefHeight="515.0" prefWidth="509.0">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="664.0" text="ENTRENAMIENTOS" textAlignment="CENTER" textFill="#000dff">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefHeight="9.0" prefWidth="600.0" visible="false" />
+                              <TableView fx:id="tablaEntrenamientos" prefHeight="321.0" prefWidth="509.0" />
+                              <Separator prefHeight="16.0" prefWidth="600.0" visible="false" />
+                              <HBox alignment="CENTER_RIGHT" prefHeight="18.0" prefWidth="509.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#clickQuitarEntrenamiento" prefHeight="25.0" prefWidth="172.0" text="QUITAR ENTRENAMIENTO" textFill="RED" />
+                                    <Separator orientation="VERTICAL" prefHeight="25.0" prefWidth="66.0" visible="false" />
+                                    <Label text="Volumen real:">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Separator orientation="VERTICAL" prefHeight="25.0" prefWidth="13.0" visible="false" />
+                                    <TextField fx:id="volumenReal" disable="true" prefHeight="25.0" prefWidth="173.0" />
+                                 </children>
+                              </HBox>
+                              <Separator prefHeight="31.0" prefWidth="509.0" visible="false" />
+                              <HBox alignment="CENTER_RIGHT" prefHeight="36.0" prefWidth="437.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#clickGenerar" prefHeight="25.0" prefWidth="172.0" text="GENERAR RUTINA" />
+                                 </children>
+                              </HBox>
+                              <Separator prefHeight="42.0" prefWidth="509.0" />
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="664.0" text="VISTA PREVIA DE LA NUEVA RUTINA" textAlignment="CENTER" textFill="#000dff">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefHeight="9.0" prefWidth="600.0" visible="false" />
+                              <TableView fx:id="tablaRutina" prefHeight="95.0" prefWidth="509.0" />
+                              <Separator prefHeight="9.0" prefWidth="600.0" visible="false" />
+                              <HBox alignment="CENTER" prefHeight="36.0" prefWidth="437.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#clickQuitarRutina" prefHeight="25.0" prefWidth="172.0" text="CANCELAR RUTINA" textFill="RED" />
+                                    <Separator orientation="VERTICAL" prefHeight="25.0" prefWidth="164.0" visible="false" />
+                                    <Button mnemonicParsing="false" onAction="#confirmarRutina" prefHeight="25.0" prefWidth="172.0" text="CONFIRMAR RUTINA" textFill="#4aa835" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="579.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>

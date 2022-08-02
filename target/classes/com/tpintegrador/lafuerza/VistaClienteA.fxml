@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="612.0" prefWidth="884.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tpintegrador.lafuerza.AppClienteControllerA">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="613.0" prefWidth="884.0" VBox.vgrow="ALWAYS">
+         <children>
+            <HBox alignment="CENTER" prefHeight="81.0" prefWidth="884.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Button fx:id="inicio" mnemonicParsing="false" onAction="#inicio" prefHeight="50.0" prefWidth="90.0" text="INICIO" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Button disable="true" mnemonicParsing="false" prefHeight="50.0" prefWidth="90.0" text="CLIENTES" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Button fx:id="tutores" mnemonicParsing="false" onAction="#tutores" prefHeight="50.0" prefWidth="90.0" text="TUTORES" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Button fx:id="musculos" mnemonicParsing="false" onAction="#musculos" prefHeight="50.0" prefWidth="90.0" text="MUSCULOS" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#ejercicios" prefHeight="50.0" prefWidth="90.0" text="EJERCICIOS" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Button fx:id="btnSalir" mnemonicParsing="false" onAction="#clickSalir" prefHeight="50.0" prefWidth="90.0" text="SALIR" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Separator layoutX="9.0" layoutY="79.0" prefHeight="11.0" prefWidth="870.0" />
+            <VBox layoutX="14.0" layoutY="91.0" prefHeight="522.0" prefWidth="870.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="515.0" prefWidth="870.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="360.0" prefWidth="240.0">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="210.0" text="DATOS PERSONALES" textAlignment="CENTER" textFill="#000dff">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Separator layoutX="10.0" layoutY="51.0" prefHeight="10.0" prefWidth="202.0" visible="false" />
+                              <TextField fx:id="formDni" prefHeight="25.0" prefWidth="203.0" promptText="DNI" />
+                              <Separator prefHeight="10.0" prefWidth="202.0" visible="false" />
+                              <TextField fx:id="formNombres" prefHeight="25.0" prefWidth="232.0" promptText="Nombres" />
+                              <Separator layoutX="10.0" layoutY="35.0" prefHeight="10.0" prefWidth="202.0" visible="false" />
+                              <TextField fx:id="formApellidos" layoutX="10.0" layoutY="45.0" prefHeight="25.0" prefWidth="232.0" promptText="Apellidos" />
+                              <Separator layoutX="10.0" layoutY="70.0" prefHeight="10.0" prefWidth="202.0" visible="false" />
+                              <DatePicker fx:id="formFechaNac" prefHeight="25.0" prefWidth="254.0" promptText="Fecha de nacimiento" />
+                              <Separator layoutX="10.0" layoutY="105.0" prefHeight="10.0" prefWidth="202.0" visible="false" />
+                              <ComboBox fx:id="formSexo" prefHeight="25.0" prefWidth="257.0" promptText="Sexo" />
+                              <Separator layoutX="10.0" layoutY="140.0" prefHeight="10.0" prefWidth="202.0" visible="false" />
+                              <DatePicker fx:id="formFechaIng" prefHeight="25.0" prefWidth="248.0" promptText="Fecha de ingreso" />
+                              <Separator layoutX="10.0" layoutY="175.0" prefHeight="10.0" prefWidth="202.0" visible="false" />
+                              <TextArea fx:id="formMedico" prefHeight="244.0" prefWidth="240.0" promptText="Consideraciones médicas" />
+                              <Separator prefHeight="0.0" prefWidth="240.0" visible="false" />
+                              <HBox alignment="CENTER" prefHeight="28.0" prefWidth="240.0">
+                                 <children>
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <Button fx:id="btnInscribir" mnemonicParsing="false" onAction="#clickInscribir" prefHeight="25.0" prefWidth="70.0" text="&gt;&gt;&gt;" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <Separator orientation="VERTICAL" prefHeight="360.0" prefWidth="25.0" />
+                        <VBox prefHeight="503.0" prefWidth="600.0">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="664.0" text="CLIENTES" textAlignment="CENTER" textFill="#000dff">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefHeight="21.0" prefWidth="600.0" visible="false" />
+                              <HBox alignment="CENTER" prefHeight="27.0" prefWidth="600.0">
+                                 <children>
+                                    <TextField fx:id="searchBoxDni" prefHeight="25.0" prefWidth="231.0" promptText="DNI" />
+                                    <Separator orientation="VERTICAL" prefHeight="27.0" prefWidth="23.0" visible="false" />
+                                    <Button fx:id="btnBuscar" mnemonicParsing="false" onAction="#clickBuscar" text="BUSCAR" />
+                                 </children>
+                              </HBox>
+                              <Separator prefHeight="25.0" prefWidth="600.0" visible="false" />
+                              <TableView fx:id="tablaClientes" prefHeight="417.0" prefWidth="600.0" />
+                              <Separator prefHeight="9.0" prefWidth="600.0" visible="false" />
+                              <HBox alignment="CENTER" prefHeight="36.0" prefWidth="437.0">
+                                 <children>
+                                    <Button fx:id="btnEliminar" mnemonicParsing="false" onAction="#clickEliminar" prefHeight="25.0" prefWidth="94.0" text="ELIMINAR" />
+                                    <Separator orientation="VERTICAL" prefHeight="30.0" prefWidth="119.0" visible="false" />
+                                    <Button fx:id="btnAdministrar" mnemonicParsing="false" onAction="#clickAdministrar" prefHeight="25.0" prefWidth="94.0" text="ADMINISTRAR" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>
